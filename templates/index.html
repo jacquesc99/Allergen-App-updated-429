@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Select all Allergens or Dietary Restrictions</title>
+
+    <style>
+        .pill {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            cursor: pointer;
+            background-color: #f5f5f5;
+        }
+
+        .pill input {
+            display: none;
+        }
+        .pill:has(input:checked) {
+            background-color: #2d6cdf;
+            color: white;
+            border-color: #2d6cdf;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Select all Allergens or Dietary Restrictions</h1>
+
+<form method="POST">
+
+
+    <label class="pill"><input type="checkbox" name="allergens" value="pork">Pork</label>
+    <label class="pill"><input type="checkbox" name="allergens" value="beef"> Beef</label>
+    <label class="pill"><input type="checkbox" name="allergens" value="poultry">Poultry</label>
+    <label class="pill"><input type="checkbox" name="allergens" value="egg">Egg</label>
+    <label class="pill"><input type="checkbox" name="allergens" value="dairy">Dairy</label>
+    <label class="pill"><input type="checkbox" name="allergens" value="fish">Fish</label>
+    <label class="pill"><input type="checkbox" name="allergens" value="shellfish">Shellfish</label>
+    <label class="pill"><input type="checkbox" name="allergens" value="gluten">Gluten</label>
+    <label class="pill"><input type="checkbox" name="allergens" value="peanuts">Peanuts</label>
+    <label class="pill"><input type="checkbox" name="allergens" value="tree_nuts">Tree Nuts</label>
+    <label class="pill"><input type="checkbox" name="allergens" value="soy">Soy</label>
+    <label class="pill"><input type="checkbox" name="allergens" value="sesame">Sesame</label>
+    <label class="pill"><input type="checkbox" name="allergens" value="cured_meats">Cured Meats</label>
+    <label class="pill"><input type="checkbox" name="allergens" value="capsaicin">Capsaicin</label>
+    <label class="pill"><input type="checkbox" name="allergens" value="piperine">Piperine</label>
+    <label class="pill"><input type="checkbox" name="allergens" value="vegetarian">Vegetarian</label>
+    <label class="pill"><input type="checkbox" name="allergens" value="vegan">Vegan</label>
+    <br><br>
+    <button type="submit">Find Safe Dishes</button>
+
+</form>
+</body>
+</html>
+
+
+
+
+
+
