@@ -1,7 +1,7 @@
 import pandas as pd
 from flask import Flask, render_template, request
 app = Flask(__name__)
-dishes = '/Users/jacquescalame/Desktop/Allergen_app/Allergens New.csv'
+dishes = 'Allergens New.csv'
 df = pd.read_csv(dishes)
 df.columns = df.columns.str.strip().str.lower()
 for col in df.columns[1:]:
@@ -38,7 +38,7 @@ def index():
             is_safe =True
 
             for a in selected_allergens:
-                if a in df.columns and row[a] is True:
+                if a in df.columns and row[a]:
                     is_safe = False
                     break
 
@@ -48,10 +48,9 @@ def index():
             })
 
 
-        return render_template('results.html', results= results)
+        return render_template('results.html', results= safe_results)
 
     return render_template('index.html', allergens= allergens)
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+
 
