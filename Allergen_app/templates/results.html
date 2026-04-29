@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Safe Dishes</title>
+</head>
+
+<body>
+
+<h1>Safe Dishes</h1>
+
+{% if results %}
+    <ul>
+        {% for item in results %}
+            <li style="color:green; font-size:18px;">
+                ✔ {{ item.dish }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No safe dishes found for your selection.</p>
+{% endif %}
+
+<br>
+
+<a href="/">← Back</a>
+
+</body>
+</html>
