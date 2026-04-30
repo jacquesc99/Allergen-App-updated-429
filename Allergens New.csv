@@ -1,4 +1,4 @@
-Dishes,pork,beef,chicken,egg,unpasturiezed cheese,dairy,fish ,shellfish ,gluten,peanuts ,tree nuts,soy,sesame ,derived protiens,cured meats ,capsacian ,piperine ,Vegitarian ,Vegan 
+dish,pork,beef,chicken,egg,unpasturiezed cheese,dairy,fish ,shellfish ,gluten,peanuts ,tree nuts,soy,sesame ,derived protiens,cured meats ,capsacian ,piperine ,Vegitarian ,Vegan 
 Wagyu Meatballs ,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
 Burratina e Prosciutto App,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE
 Carpaccio di Zucchine e Burrata ,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE

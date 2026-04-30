@@ -2,15 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> Safe Dishes</title>
+    <title>Safe Dishes</title>
 </head>
+
 <body>
+
 <h1>Safe Dishes</h1>
 
-{% if results|length > 0 %}
-    {% for item in results %}
-        <p style="color:green;">{{ item.dish }}</p>
-    {% endfor %}
+{% if results %}
+    <ul>
+        {% for item in results %}
+            <li style="color:green; font-size:18px;">
+                ✔ {{ item.dish }}
+            </li>
+        {% endfor %}
+    </ul>
 {% else %}
     <p>No safe dishes found for your selection.</p>
 {% endif %}
@@ -20,5 +26,4 @@
 <a href="/">← Back</a>
 
 </body>
-</form>
 </html>

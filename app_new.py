@@ -26,8 +26,11 @@ for col in df.columns[1:]:
 def index():
 
     allergens = df.columns.tolist()[1:]
-
     safe_results = []
+
+    ALLERGENS= {"eggs", "dairy", "fish", "shellfish", "gluten", "peanuts", "tree nuts", "soy", "sesame", "capsacian", "piperine", "allium" }
+    DIETARY = {"vegetarian", "vegan", "unpasturiezed cheese", "cured meats"}
+    PREFERENCES = {"pork", "beef", "poultry"}
 
     if request.method == 'POST':
         #print("FORM DATA:", request.form)
@@ -37,10 +40,13 @@ def index():
         for _, row in df.iterrows():
             is_safe =True
 
-            for a in selected_allergens:
-                if a in df.columns and row[a]:
-                    is_safe = False
-                    break
+            for allergen in selected_allergens:
+
+                if allergen in df.columns:
+
+                    if row[allergen]== True:
+                        is_safe = False
+                        break
 
             if is_safe:
                 safe_results.append({
@@ -51,6 +57,3 @@ def index():
         return render_template('results.html', results= safe_results)
 
     return render_template('index.html', allergens= allergens)
-
-
-
